@@ -1,332 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon - Praazo</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome link -->
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet"> <!-- Lora font -->
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #0f172a; /* Updated background color */
-            color: #fff; /* White text */
-            text-align: center;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praazo - Coming Soon</title>
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@400;600&family=Lora:wght@400;600&display=swap"
+    rel="stylesheet">
 
-        /* Header Section */
-        .store-name {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #FFA500; /* Orange color */
-            margin-top: 50px;
-        }
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-        .tagline {
-            font-size: 1rem;
-            color: #ddd;
-            font-weight: 500;
-            margin-top: 10px;
-            font-style: italic;
-            font-family: 'Lora', serif; /* Set Lora font */
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .short-bio {
-            font-size: 1.2rem;
-            color: #ddd;
-            margin-top: 10px;
-        }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      height: 100vh;
+      background: #121212;
+    }
 
-        /* Coming Soon Section */
-        .coming-soon h2 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #FFA500;
-            margin-top: 20px;
-        }
+    .landing-page {
+      width: 100%;
+      height: 100%;
+      background: url('https://via.placeholder.com/1500x1000') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
-        /* Button Styles */
-        .btn {
-            display: inline-block;
-            background-color: #FFA500;
-            color: #fff;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-size: 1rem;
-            margin: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Button shadow */
-        }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+    }
 
-        .btn:hover {
-            background-color: #ff7f00;
-        }
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
 
-        /* Text Section */
-        .team-message {
-            font-size: 1.2rem;
-            color: #ddd;
-            margin-top: 30px;
-        }
+    .brand {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+      color: #FF9100;
+    }
 
-        /* Email Subscription */
-        .subscription {
-            margin-top: 30px;
-        }
+    .main-text {
+      font-size: 56px;
+      font-weight: bold;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 40px;
+    }
 
-        .email-input {
-            padding: 10px;
-            font-size: 1rem;
-            border: none;
-            border-radius: 5px;
-            width: 60%;
-            margin-right: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Added shadow */
-        }
+    /* Tagline */
+    .tagline {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      margin-bottom: 35px;
+      background: linear-gradient(135deg, rgba(245, 124, 0, 0.9), rgba(13, 71, 161, 0.9));
+      padding: 18px 28px;
+      border-radius: 12px;
+      display: inline-block;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
 
-        .subscribe-btn {
-            padding: 10px 20px;
-            background-color: #FFA500;
-            color: #fff;
-            border: none;
-            font-size: 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Added shadow */
-        }
+    /* Countdown */
+    .countdown {
+      margin-bottom: 35px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
 
-        .subscribe-btn:hover {
-            background-color: #ff7f00;
-        }
+    .countdown div {
+      background: linear-gradient(135deg, #FF6F00, #FF9100);
+      padding: 15px 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
 
-        /* Countdown Timer */
-        .countdown h3 {
-            font-size: 2rem;
-            color: #fff;
-            margin-top: 40px;
-        }
+    .countdown span {
+      font-size: 28px;
+      font-weight: bold;
+      display: block;
+    }
 
-        #timer {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 10px;
-        }
+    .time-label {
+      font-size: 12px;
+      text-transform: uppercase;
+    }
 
-        .time-box {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            width: 80px;
-            text-align: center;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Added shadow */
-        }
+    /* Newsletter */
+    .newsletter {
+      margin-bottom: 35px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
 
-        .time-box span {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
+    .newsletter input {
+      padding: 10px;
+      font-size: 16px;
+      width: 250px;
+      border-radius: 5px;
+      border: 2px solid #FF6F00;
+      color: #333;
+    }
 
-        .time-box .label {
-            font-size: 1rem;
-            color: #FFA500;
-        }
+    .newsletter button {
+      background-color: #FF6F00;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
 
-        /* Footer Section */
-        footer {
-            margin-top: 50px;
-        }
+    .newsletter button:hover {
+      background-color: #e65c00;
+    }
 
-        .social-media {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
+    /* Bangla text */
+    .subtitle {
+      font-size: 18px;
+      margin-top: 20px;
+      line-height: 1.6;
+      font-weight: 400;
+    }
 
-        .social-icon {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.5rem; /* Smaller icon size */
-            background-color: #333;
-            padding: 10px;
-            border-radius: 50%; /* Circular border */
-            transition: background-color 0.3s;
-            width: 40px; /* Adjust the size of the icon */
-            height: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Added shadow */
-        }
+    /* Social Icons */
+    .social-icons {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
 
-        .social-icon:hover {
-            background-color: #FFA500;
-        }
+    .social-icons i {
+      font-size: 26px;
+      color: white;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
 
-        /* Message Box Below Buttons */
-        .message-box {
-            background-color: #1e293b; /* Darker background to match theme */
-            color: #fff;
-            padding: 30px;
-            margin-top: 30px;
-            border-radius: 10px;
-            max-width: 800px;
-            margin: 0 auto;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Added shadow */
-        }
+    .social-icons i:hover {
+      color: #FF6F00;
+      transform: scale(1.1);
+    }
 
-        /* Live Chat Button */
-        .chat-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #FFA500;
-            color: #fff;
-            padding: 15px;
-            border-radius: 50%;
-            font-size: 1.5rem;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Button shadow */
-            cursor: pointer;
-        }
+    /* Explore Btn */
+    .explore-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #F57C00;
+      color: white;
+      padding: 12px 22px;
+      font-size: 15px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
 
-        .chat-btn:hover {
-            background-color: #ff7f00;
-        }
+    .explore-btn:hover {
+      background-color: #e65c00;
+    }
 
-        /* Mobile-Friendly */
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-
-            .time-box {
-                width: 60px;
-                padding: 15px;
-            }
-
-            .social-icon {
-                width: 35px;
-                height: 35px;
-            }
-
-            .email-input {
-                width: 70%;
-            }
-        }
-
-    </style>
+    /* Footer */
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      color: #bbb;
+      background: rgba(0, 0, 0, 0.3);
+    }
+  </style>
 </head>
+
 <body>
+  <div class="landing-page">
+    <div class="overlay"></div>
 
-    <div class="container">
-        <!-- Top Section -->
-        <div class="header">
-            <h1 class="store-name">Praazo</h1>
-            <p class="tagline">Buy Better.</p> <!-- Added Tagline -->
-            <p class="short-bio">Bangladesh’s trusted one-stop shop for Electronics Gadgets, Mobile Accessories, Books, Fashion, and much more.</p>
+    <div class="content">
+      <div class="brand">Praazo</div>
+      <h1 class="main-text">Coming Soon</h1>
+
+      <!-- English tagline -->
+      <div class="tagline">
+        Bangladesh’s trusted one-stop shop for Electronics Gadgets, Mobile Accessories, Books, Fashion, and much more.
+      </div>
+
+      <!-- Countdown -->
+      <div class="countdown">
+        <div>
+          <span id="days">00</span>
+          <span class="time-label">Days</span>
         </div>
-
-        <!-- Coming Soon Section -->
-        <div class="coming-soon">
-            <h2>Coming Soon</h2>
+        <div>
+          <span id="hours">00</span>
+          <span class="time-label">Hours</span>
         </div>
-
-        <!-- Buttons Section -->
-        <div class="buttons">
-            <a href="#" class="btn">Join Waitlist</a>
-            <a href="#" class="btn">Be the First to Know</a>
+        <div>
+          <span id="minutes">00</span>
+          <span class="time-label">Minutes</span>
         </div>
-
-        <!-- Message Box -->
-        <div class="message-box">
-            <p>আমরা আপনাকে সেরা কেনাকাটার অভিজ্ঞতা দেওয়ার জন্য অসাধারণ কিছু তৈরি করছি। আমাদের জমকালো উদ্বোধনের জন্য আমাদের সাথেই থাকুন! — Praazo Team</p>
+        <div>
+          <span id="seconds">00</span>
+          <span class="time-label">Seconds</span>
         </div>
+      </div>
 
-        <!-- Email Subscription -->
-        <div class="subscription">
-            <input type="email" placeholder="Enter your email" class="email-input">
-            <button class="subscribe-btn">Subscribe</button>
-        </div>
+      <!-- Newsletter -->
+      <div class="newsletter">
+        <input type="email" placeholder="Enter your email" id="email">
+        <button onclick="notifyMe()">Notify Me</button>
+      </div>
 
-        <!-- Countdown Timer -->
-        <div class="countdown">
-            <h3>Countdown to Launch</h3>
-            <div id="timer">
-                <div class="time-box" id="days">
-                    <span>0</span>
-                    <span class="label">Days</span>
-                </div>
-                <div class="time-box" id="hours">
-                    <span>0</span>
-                    <span class="label">Hours</span>
-                </div>
-                <div class="time-box" id="minutes">
-                    <span>0</span>
-                    <span class="label">Minutes</span>
-                </div>
-                <div class="time-box" id="seconds">
-                    <span>0</span>
-                    <span class="label">Seconds</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Footer Section -->
-        <footer>
-            <div class="social-media">
-                <a href="https://facebook.com/praazo.global/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com/praazo.global/" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/+8801306529257" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-            </div>
-        </footer>
+      <!-- Bangla text -->
+      <p class="subtitle">
+        আমরা আপনাকে সেরা কেনাকাটার অভিজ্ঞতা দেওয়ার জন্য অসাধারণ কিছু তৈরি করছি।<br>
+        আমাদের জমকালো উদ্বোধনের জন্য আমাদের সাথেই থাকুন! — <b>Praazo Team</b>
+      </p>
 
-        <!-- Live Chat Button -->
-        <div class="chat-btn">
-            <i class="fas fa-comment"></i>
-        </div>
-
+      <!-- Social Icons -->
+      <div class="social-icons">
+        <a href="https://www.facebook.com/praazo.global/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/praazo.global/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/praazoglobal/" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/company/praazo" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://wa.me/8801306529257/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.youtube.com/@praazo" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
     </div>
 
-    <script>
-        // Countdown Timer
-        var launchDate = new Date("Nov 30, 2025 00:00:00").getTime(); // Change this to your desired launch date
-        var x = setInterval(function() {
-            var now = new Date().getTime();
-            var distance = launchDate - now;
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            document.getElementById("days").children[0].innerText = days;
-            document.getElementById("hours").children[0].innerText = hours;
-            document.getElementById("minutes").children[0].innerText = minutes;
-            document.getElementById("seconds").children[0].innerText = seconds;
+    <a href="#" class="explore-btn">Explore Praazo</a>
 
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("timer").innerHTML = "Launch is here!";
-            }
-        }, 1000);
-    </script>
+    <!-- Footer -->
+    <footer>
+      © 2025 Praazo. All Rights Reserved.
+    </footer>
+  </div>
 
+  <script>
+    const countdownDate = new Date("Nov 29, 2025 00:00:00").getTime();
+
+    setInterval(function () {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+    }, 1000);
+
+    function notifyMe() {
+      const email = document.getElementById('email').value;
+      if (email) {
+        alert("Thank you for subscribing! We'll notify you when we launch.");
+      } else {
+        alert("Please enter a valid email.");
+      }
+    }
+  </script>
 </body>
+
 </html>
-
-
-
-
