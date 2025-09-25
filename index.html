@@ -1,147 +1,374 @@
-<!doctype html>
-<html lang="bn">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Praazo — Coming Soon</title>
-  <meta name="description" content="Praazo is coming soon — mobile accessories, home goods, books & gadgets. Stay tuned!" />
-  <meta name="theme-color" content="#FD650A" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - Praazo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome link -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet"> <!-- Lora font -->
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e1e; /* Dark background */
+            color: #fff; /* White text */
+            text-align: center;
+        }
 
-  <style>
-    :root{
-      --accent: #FD650A;
-      --bg: #0b1220;
-      --card: rgba(255,255,255,0.04);
-      --muted: #bfc9d3;
-      --glass: rgba(255,255,255,0.03);
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;background:
-      linear-gradient(180deg,#071026 0%, #071726 100%);color:#fff}
-    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px}
-    .card{
-      width:100%;max-width:920px;padding:36px;border-radius:14px;
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border:1px solid rgba(255,255,255,0.04);box-shadow:0 10px 30px rgba(2,6,23,0.6);
-      display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;
-    }
-    .brand{
-      display:flex;align-items:center;gap:16px;
-    }
-    .logo{
-      width:64px;height:64px;border-radius:12px;background:var(--accent);display:grid;place-items:center;
-      font-weight:800;color:#fff;font-size:26px;box-shadow:0 6px 18px rgba(253,101,10,0.18)
-    }
-    h1{font-size:34px;margin:0 0 8px;line-height:1.02}
-    p.lead{margin:0;color:var(--muted);font-size:16px}
-    .actions{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
-    .btn{
-      background:var(--accent);color:#fff;padding:10px 18px;border-radius:10px;text-decoration:none;font-weight:700;
-      box-shadow:0 6px 18px rgba(253,101,10,0.14);display:inline-block
-    }
-    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);font-weight:600}
-    .meta{margin-top:14px;color:var(--muted);font-size:14px}
-    .countdown{display:flex;gap:12px;margin-top:18px}
-    .time{background:var(--glass);padding:12px 14px;border-radius:10px;min-width:72px;text-align:center}
-    .time .num{font-weight:700;font-size:20px}
-    .time .lbl{font-size:12px;color:var(--muted);margin-top:6px}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-    /* right column */
-    .right{
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      padding:18px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)
-    }
-    .subscribe label{font-size:13px;color:var(--muted);display:block;margin-bottom:8px}
-    .subscribe input[type="email"]{
-      width:100%;padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);
-      background:transparent;color:#fff;outline:none
-    }
-    .subscribe button{width:100%;margin-top:10px;padding:10px;border-radius:8px;border:0;background:var(--accent);color:#fff;font-weight:700}
-    .small{font-size:13px;color:var(--muted);margin-top:10px;text-align:center}
+        /* Header Section */
+        .store-name {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #FFA500; /* Orange color */
+            margin-top: 50px;
+        }
 
-    @media(max-width:880px){
-      .card{grid-template-columns:1fr;max-width:720px;padding:22px}
-      .right{order:2}
-    }
-  </style>
+        .tagline {
+            font-size: 1rem;
+            color: #ddd;
+            font-weight: 500;
+            margin-top: 10px;
+            font-style: italic;
+            font-family: 'Lora', serif; /* Set Lora font */
+        }
+
+        .short-bio {
+            font-size: 1.2rem;
+            color: #ddd;
+            margin-top: 10px;
+        }
+
+        /* Coming Soon Section */
+        .coming-soon h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #FFA500;
+            margin-top: 20px;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            background-color: #FFA500;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1rem;
+            margin: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #ff7f00;
+        }
+
+        /* Text Section */
+        .team-message {
+            font-size: 1.2rem;
+            color: #ddd;
+            margin-top: 30px;
+        }
+
+        /* Email Subscription */
+        .subscription {
+            margin-top: 30px;
+        }
+
+        .email-input {
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            width: 60%;
+            margin-right: 10px;
+        }
+
+        .subscribe-btn {
+            padding: 10px 20px;
+            background-color: #FFA500;
+            color: #fff;
+            border: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .subscribe-btn:hover {
+            background-color: #ff7f00;
+        }
+
+        /* Countdown Timer */
+        .countdown h3 {
+            font-size: 2rem;
+            color: #fff;
+            margin-top: 40px;
+        }
+
+        #timer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .time-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            width: 80px;
+            text-align: center;
+        }
+
+        .time-box span {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .time-box .label {
+            font-size: 1rem;
+            color: #FFA500;
+        }
+
+        /* Footer Section */
+        footer {
+            margin-top: 50px;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .social-icon {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.5rem; /* Smaller icon size */
+            background-color: #333;
+            padding: 10px;
+            border-radius: 50%; /* Circular border */
+            transition: background-color 0.3s;
+            width: 40px; /* Adjust the size of the icon */
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-icon:hover {
+            background-color: #FFA500;
+        }
+
+        /* Customer Reviews Section */
+        .reviews {
+            background-color: #333;
+            color: #fff;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 10px;
+        }
+
+        .reviews h3 {
+            font-size: 2rem;
+            color: #FFA500;
+        }
+
+        .review-item {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .review-item span {
+            font-weight: bold;
+            color: #FFA500;
+        }
+
+        /* FAQ Section */
+        .faq {
+            margin-top: 40px;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .faq h3 {
+            font-size: 2rem;
+            color: #FFA500;
+        }
+
+        .faq-item {
+            margin: 15px 0;
+        }
+
+        .faq-item p {
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        /* Live Chat Button */
+        .chat-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #FFA500;
+            color: #fff;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .chat-btn:hover {
+            background-color: #ff7f00;
+        }
+
+        /* Mobile-Friendly */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .time-box {
+                width: 60px;
+                padding: 15px;
+            }
+
+            .social-icon {
+                width: 35px;
+                height: 35px;
+            }
+
+            .email-input {
+                width: 70%;
+            }
+        }
+
+    </style>
 </head>
 <body>
-  <main class="wrap" role="main" aria-labelledby="title">
-    <section class="card" aria-label="Coming soon">
-      <div>
-        <div class="brand" aria-hidden="true">
-          <div class="logo" title="Praazo">P</div>
-          <div>
-            <h1 id="title">Praazo — Coming Soon</h1>
-            <p class="lead">Mobile accessories, home goods, books & electronic gadgets — আমরা খুব শীঘ্রই ফিরছি।</p>
-          </div>
+
+    <div class="container">
+        <!-- Top Section -->
+        <div class="header">
+            <h1 class="store-name">Praazo</h1>
+            <p class="tagline">Buy Better.</p> <!-- Added Tagline -->
+            <p class="short-bio">Bangladesh’s trusted one-stop shop for Electronics Gadgets, Mobile Accessories, Books, Fashion, and much more.</p>
         </div>
 
-        <div class="actions" role="group" aria-label="Primary actions">
-          <a class="btn" href="mailto:info@praazo.com">Contact Us</a>
-          <a class="btn secondary" href="#" id="notifyBtn">Notify me</a>
+        <!-- Coming Soon Section -->
+        <div class="coming-soon">
+            <h2>Coming Soon</h2>
         </div>
 
-        <div class="meta">এখানে স্টোর লঞ্চের আগ পর্যন্ত এই পেইজ থাকবে। ডোমেইন ও SSL সম্পূর্ণ সুরক্ষিত থাকবে।</div>
-
-        <div class="countdown" aria-hidden="false" id="countdown" style="margin-top:20px">
-          <div class="time"><div class="num" id="days">--</div><div class="lbl">Days</div></div>
-          <div class="time"><div class="num" id="hours">--</div><div class="lbl">Hours</div></div>
-          <div class="time"><div class="num" id="minutes">--</div><div class="lbl">Minutes</div></div>
-          <div class="time"><div class="num" id="seconds">--</div><div class="lbl">Seconds</div></div>
+        <!-- Buttons Section -->
+        <div class="buttons">
+            <a href="#" class="btn">Join Waitlist</a>
+            <a href="#" class="btn">Be the First to Know</a>
         </div>
-      </div>
 
-      <aside class="right" aria-label="Subscribe box">
-        <div class="subscribe" aria-hidden="false">
-          <label for="email">Notify me when launch</label>
-          <input id="email" type="email" placeholder="আপনার ইমেইল দিন (example@mail.com)" />
-          <button id="submitEmail">Subscribe</button>
-          <p class="small">আমরা আপনার ইমেইল কেবল লঞ্চ আপডেটে ব্যবহার করবো।</p>
+        <!-- Customer Reviews Section -->
+        <div class="reviews">
+            <h3>What Our Customers Are Saying</h3>
+            <div class="review-item">
+                <p><span>Imran C.:</span> "Praazo offers the best selection of gadgets in Bangladesh! Can't wait for the launch."</p>
+            </div>
+            <div class="review-item">
+                <p><span>Shadin M.:</span> "I’ve been waiting for a one-stop-shop like this. The products look amazing!"</p>
+            </div>
         </div>
-      </aside>
-    </section>
-  </main>
 
-  <script>
-    /* ====== Countdown: change targetDate to your launch date (YYYY-MM-DDTHH:MM:SS) ====== */
-    const targetDate = new Date("2025-12-01T00:00:00"); // <-- change this
-    const daysEl = document.getElementById('days');
-    const hoursEl = document.getElementById('hours');
-    const minsEl = document.getElementById('minutes');
-    const secsEl = document.getElementById('seconds');
+        <!-- FAQ Section -->
+        <div class="faq">
+            <h3>Frequently Asked Questions</h3>
+            <div class="faq-item">
+                <p><strong>Q: When will Praazo launch?</strong><br>A: Praazo will launch in 65 days! Stay tuned.</p>
+            </div>
+            <div class="faq-item">
+                <p><strong>Q: How can I sign up for updates?</strong><br>A: Simply enter your email above to subscribe for the latest updates.</p>
+            </div>
+        </div>
 
-    function updateCountdown(){
-      const now = new Date();
-      const diff = Math.max(0, targetDate - now);
-      const secs = Math.floor(diff/1000) % 60;
-      const mins = Math.floor(diff/1000/60) % 60;
-      const hours = Math.floor(diff/1000/60/60) % 24;
-      const days = Math.floor(diff/1000/60/60/24);
-      daysEl.textContent = days;
-      hoursEl.textContent = String(hours).padStart(2,'0');
-      minsEl.textContent = String(mins).padStart(2,'0');
-      secsEl.textContent = String(secs).padStart(2,'0');
-    }
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
+        <!-- Email Subscription -->
+        <div class="subscription">
+            <input type="email" placeholder="Enter your email" class="email-input">
+            <button class="subscribe-btn">Subscribe</button>
+        </div>
 
-    /* ====== Subscribe: simple mailto fallback (no backend) ====== */
-    document.getElementById('submitEmail').addEventListener('click', function(){
-      const email = document.getElementById('email').value.trim();
-      if(!email || !/^\S+@\S+\.\S+$/.test(email)){
-        alert('একটি বৈধ ইমেইল লিখুন।');
-        return;
-      }
-      // mailto fallback — you will receive an email in your inbox (or use Netlify forms / third-party)
-      window.location.href = `mailto:info@praazo.com?subject=Subscribe%20for%20launch&body=Please%20subscribe%20this%20email:%20${encodeURIComponent(email)}`;
-    });
+        <!-- Countdown Timer -->
+        <div class="countdown">
+            <h3>Countdown to Launch</h3>
+            <div id="timer">
+                <div class="time-box" id="days">
+                    <span>0</span>
+                    <span class="label">Days</span>
+                </div>
+                <div class="time-box" id="hours">
+                    <span>0</span>
+                    <span class="label">Hours</span>
+                </div>
+                <div class="time-box" id="minutes">
+                    <span>0</span>
+                    <span class="label">Minutes</span>
+                </div>
+                <div class="time-box" id="seconds">
+                    <span>0</span>
+                    <span class="label">Seconds</span>
+                </div>
+            </div>
+        </div>
 
-    // Optional: "Notify me" quick link opens mail client
-    document.getElementById('notifyBtn').addEventListener('click', function(e){
-      e.preventDefault();
-      window.location.href = 'mailto:info@praazo.com?subject=Notify%20me%20for%20Praazo%20launch';
-    });
-  </script>
+        <!-- Footer Section -->
+        <footer>
+            <div class="social-media">
+                <a href="https://facebook.com/praazo.global/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/praazo.global/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/+8801306529257/" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </footer>
+
+        <!-- Live Chat Button -->
+        <div class="chat-btn">
+            <i class="fas fa-comment"></i>
+        </div>
+
+    </div>
+
+    <script>
+        // Countdown Timer
+        var launchDate = new Date("Nov 30, 2025 00:00:00").getTime(); // Change this to your desired launch date
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = launchDate - now;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById("days").children[0].innerText = days;
+            document.getElementById("hours").children[0].innerText = hours;
+            document.getElementById("minutes").children[0].innerText = minutes;
+            document.getElementById("seconds").children[0].innerText = seconds;
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML = "Launch is here!";
+            }
+        }, 1000);
+    </script>
+
 </body>
 </html>
