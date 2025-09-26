@@ -2,17 +2,15 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Praazo - Coming Soon</title>
 
   <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@400;600&family=Lora:wght@400;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@400;600&family=Lora:wght@400;600&display=swap" rel="stylesheet" />
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
   <style>
     * {
@@ -23,20 +21,14 @@
 
     body {
       font-family: 'Montserrat', sans-serif;
-      height: 100vh;
-      background: #121212;
-    }
-
-    .landing-page {
-      width: 100%;
-      height: 100%;
-      background: url('https://via.placeholder.com/1500x1000') no-repeat center center fixed;
-      background-size: cover;
-      position: relative;
-      color: white;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      position: relative;
+      color: #ffffff;
+      background: url('https://images.unsplash.com/photo-1593642634443-44adaa06623a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80')
+        no-repeat center center/cover; /* <-- Change this URL to your desired image */
     }
 
     .overlay {
@@ -45,7 +37,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.55);
+      background: rgba(0, 0, 0, 0.65);
+      z-index: 0;
     }
 
     .content {
@@ -66,62 +59,62 @@
     }
 
     .main-text {
-      font-size: 56px;
+      font-size: 48px;
       font-weight: bold;
       font-family: 'Poppins', sans-serif;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
-    /* Tagline */
     .tagline {
       font-family: 'Lora', serif;
-      font-size: 20px;
-      margin-bottom: 35px;
-      background: linear-gradient(135deg, rgba(245, 124, 0, 0.9), rgba(13, 71, 161, 0.9));
-      padding: 18px 28px;
-      border-radius: 12px;
+      font-size: 18px;
+      margin-bottom: 25px;
+      background: rgba(255, 255, 255, 0.9);
+      color: #111;
+      padding: 15px 20px;
+      border-radius: 10px;
       display: inline-block;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      max-width: 700px;
     }
 
-    /* Countdown */
     .countdown {
-      margin-bottom: 35px;
+      margin-bottom: 25px;
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 15px;
+      flex-wrap: wrap;
     }
 
     .countdown div {
       background: linear-gradient(135deg, #FF6F00, #FF9100);
-      padding: 15px 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      padding: 12px 18px;
+      border-radius: 10px;
+      min-width: 70px;
     }
 
     .countdown span {
-      font-size: 28px;
+      font-size: 24px;
       font-weight: bold;
       display: block;
     }
 
     .time-label {
-      font-size: 12px;
+      font-size: 11px;
       text-transform: uppercase;
     }
 
-    /* Newsletter */
     .newsletter {
-      margin-bottom: 35px;
+      margin-bottom: 25px;
       display: flex;
       justify-content: center;
-      gap: 10px;
+      gap: 8px;
+      flex-wrap: wrap;
     }
 
     .newsletter input {
       padding: 10px;
-      font-size: 16px;
-      width: 250px;
+      font-size: 15px;
+      width: 240px;
       border-radius: 5px;
       border: 2px solid #FF6F00;
       color: #333;
@@ -133,7 +126,7 @@
       padding: 10px 20px;
       border: none;
       border-radius: 5px;
-      font-size: 16px;
+      font-size: 15px;
       cursor: pointer;
     }
 
@@ -141,24 +134,23 @@
       background-color: #e65c00;
     }
 
-    /* Bangla text */
     .subtitle {
-      font-size: 18px;
-      margin-top: 20px;
+      font-size: 16px;
+      margin-top: 15px;
       line-height: 1.6;
       font-weight: 400;
     }
 
-    /* Social Icons */
     .social-icons {
-      margin-top: 40px;
+      margin-top: 30px;
       display: flex;
       justify-content: center;
-      gap: 30px;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     .social-icons i {
-      font-size: 26px;
+      font-size: 22px;
       color: white;
       transition: color 0.3s ease, transform 0.3s ease;
     }
@@ -168,102 +160,121 @@
       transform: scale(1.1);
     }
 
-    /* Explore Btn */
     .explore-btn {
       position: absolute;
       top: 20px;
       right: 20px;
       background-color: #F57C00;
       color: white;
-      padding: 12px 22px;
-      font-size: 15px;
+      padding: 10px 18px;
+      font-size: 14px;
       font-weight: bold;
       border: none;
       border-radius: 5px;
       cursor: pointer;
       text-decoration: none;
+      z-index: 2;
     }
 
     .explore-btn:hover {
       background-color: #e65c00;
     }
 
-    /* Footer */
     footer {
       position: relative;
       z-index: 1;
       text-align: center;
-      padding: 15px;
-      font-size: 14px;
+      padding: 12px;
+      font-size: 13px;
       color: #bbb;
       background: rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .main-text {
+        font-size: 36px;
+      }
+      .tagline {
+        font-size: 16px;
+        padding: 12px 16px;
+      }
+      .countdown span {
+        font-size: 20px;
+      }
+      .newsletter input {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .main-text {
+        font-size: 28px;
+      }
+      .tagline {
+        font-size: 15px;
+      }
+      .subtitle {
+        font-size: 14px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="landing-page">
-    <div class="overlay"></div>
+  <div class="overlay"></div>
 
-    <div class="content">
-      <div class="brand">Praazo</div>
-      <h1 class="main-text">Coming Soon</h1>
+  <a href="#" class="explore-btn">Explore Praazo</a>
 
-      <!-- English tagline -->
-      <div class="tagline">
-        Bangladesh’s trusted one-stop shop for Electronics Gadgets, Mobile Accessories, Books, Fashion, and much more.
+  <div class="content">
+    <div class="brand">Praazo</div>
+    <h1 class="main-text">Coming Soon</h1>
+
+    <div class="tagline">
+      Bangladesh’s trusted one-stop shop for Electronics Gadgets, Mobile Accessories, Books, Fashion, and much more.
+    </div>
+
+    <div class="countdown">
+      <div>
+        <span id="days">00</span>
+        <span class="time-label">Days</span>
       </div>
-
-      <!-- Countdown -->
-      <div class="countdown">
-        <div>
-          <span id="days">00</span>
-          <span class="time-label">Days</span>
-        </div>
-        <div>
-          <span id="hours">00</span>
-          <span class="time-label">Hours</span>
-        </div>
-        <div>
-          <span id="minutes">00</span>
-          <span class="time-label">Minutes</span>
-        </div>
-        <div>
-          <span id="seconds">00</span>
-          <span class="time-label">Seconds</span>
-        </div>
+      <div>
+        <span id="hours">00</span>
+        <span class="time-label">Hours</span>
       </div>
-
-      <!-- Newsletter -->
-      <div class="newsletter">
-        <input type="email" placeholder="Enter your email" id="email">
-        <button onclick="notifyMe()">Notify Me</button>
+      <div>
+        <span id="minutes">00</span>
+        <span class="time-label">Minutes</span>
       </div>
-
-      <!-- Bangla text -->
-      <p class="subtitle">
-        আমরা আপনাকে সেরা কেনাকাটার অভিজ্ঞতা দেওয়ার জন্য অসাধারণ কিছু তৈরি করছি।<br>
-        আমাদের জমকালো উদ্বোধনের জন্য আমাদের সাথেই থাকুন! — <b>Praazo Team</b>
-      </p>
-
-      <!-- Social Icons -->
-      <div class="social-icons">
-        <a href="https://www.facebook.com/praazo.global/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/praazo.global/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com/praazoglobal/" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.linkedin.com/company/praazo" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://wa.me/8801306529257/" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.youtube.com/@praazo" target="_blank"><i class="fab fa-youtube"></i></a>
+      <div>
+        <span id="seconds">00</span>
+        <span class="time-label">Seconds</span>
       </div>
     </div>
 
-    <a href="#" class="explore-btn">Explore Praazo</a>
+    <div class="newsletter">
+      <input type="email" placeholder="Enter your email" id="email">
+      <button onclick="notifyMe()">Notify Me</button>
+    </div>
 
-    <!-- Footer -->
-    <footer>
-      © 2025 Praazo. All Rights Reserved.
-    </footer>
+    <p class="subtitle">
+      আমরা আপনাকে সেরা কেনাকাটার অভিজ্ঞতা দেওয়ার জন্য অসাধারণ কিছু তৈরি করছি।<br>
+      আমাদের জমকালো উদ্বোধনের জন্য আমাদের সাথেই থাকুন! — <b>Praazo Team</b>
+    </p>
+
+    <div class="social-icons">
+      <a href="https://www.facebook.com/praazo.global/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/praazo.global/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/PraazoOfficial" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/company/108125993/admin/dashboard/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://wa.me/8801306529257/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.youtube.com/@Praazo" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
   </div>
+
+  <footer>
+    © 2025 Praazo. All Rights Reserved.
+  </footer>
 
   <script>
     const countdownDate = new Date("Oct 12, 2025 00:00:00").getTime();
@@ -295,4 +306,3 @@
 </body>
 
 </html>
-
